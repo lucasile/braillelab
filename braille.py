@@ -29,15 +29,6 @@ templates = {
     (('o', 'o', 'o'), ('o', 'o', 'o')): ' '
 }
 
-class Pattern():
-
-    def __init__(self, pattern_matrix = (('o', 'o', 'o'), ('o', 'o', 'o'))):
-        self.pattern_matrix = pattern_matrix
-
-    def match(self):
-        return templates[self.pattern_matrix]
-
-
 if __name__ == '__main__':
 
     braille_patterns = []
@@ -59,7 +50,7 @@ if __name__ == '__main__':
                             braille_line[1][j + 1],
                             braille_line[2][j + 1]))
 
-                braille_patterns.append(Pattern(columns))
+                braille_patterns.append(columns)
 
             braille_patterns.append('\n')
 
@@ -72,7 +63,7 @@ if __name__ == '__main__':
             print(last_line)
             last_line = ''
         else:
-            last_line += figure.match()
+            last_line += templates[figure]
 
 
 
