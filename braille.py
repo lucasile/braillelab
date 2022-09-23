@@ -1,8 +1,4 @@
 
-from cv2 import line
-from numpy import linspace
-
-
 templates = {
     (('x', 'o', 'o'), ('o', 'o', 'o')): 'a',
     (('x', 'x', 'o'), ('o', 'o', 'o')): 'b',
